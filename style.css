@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    overflow: hidden;
+}
+
+ /*----------------------------NAVBAR--------------------------------*/
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 5%;
+    background: transparent;
+    z-index: 1;
+    color: white;
+}
+.left{
+    display: flex;
+    align-items: center;
+}
+
+
+.left h1{
+    margin-right: 10px;
+    font-size: 50px;
+    
+}
+
+.left a{
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    text-align: center;
+    transition: .5s;
+
+}
+
+
+
+.left a:hover{
+    background-color: white;
+   
+}
+
+.left a:hover i{
+    color: black;
+}
+
+.right a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    &:hover{
+        border-bottom: 2px solid white;
+    }
+}
+
+
+@keyframes example{
+    0%{
+        bottom: -100%; 
+        opacity: 0;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+    33%{
+        opacity: .33;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+
+    66%{
+        opacity: .66;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+    100%{
+        opacity: 1;
+        bottom:0;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+}
+
+
+@keyframes example1{
+    0%{
+        top: -100%; 
+        opacity: 0;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+    33%{
+        opacity: .33;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+
+    66%{
+        opacity: .66;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+    100%{
+        opacity: 1;
+        top:0;
+        font-size: 200px;
+        color: rgb(85, 75, 75);
+        background: transparent;
+        mix-blend-mode:difference;
+    }
+}
+
+
+@keyframes example2{
+    0%{
+        bottom: -100%; 
+        opacity: 0;
+    }
+    33%{
+        opacity: .33;
+    }
+
+    66%{
+        opacity: .66;
+    }
+    100%{
+        opacity: 1;
+        bottom:0;
+
+    }
+}
+
+
+section{
+    width: 100%;
+    height: 100%;
+}
+
+.slide-brazil img,.slide-mexico img,.slide-africa img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* RESMİN SAYFAYA DOLMASINI SAĞLADI */
+}
+
+.blur-area{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.country-bra,.country-mex,.country-afr{ /* İÇİ TRANSPARAN YAPICALACAK */
+    position: absolute;
+    width: 100%;
+    height: 100%;     
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    animation: example 1s ease-in-out;
+}
+
+.country-bra h1,.country-mex h1,.country-afr h1{
+    font-size: 200px;
+    color: rgb(85, 75, 75);
+    background: transparent;
+    mix-blend-mode:difference;
+
+
+}
+
+.content-brazil,.content-mexico,.content-africa{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    padding: 50px;
+    margin-bottom: 25px;
+    animation: example2 1s ease-in-out;
+}
+
+
+.btn a{
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    bottom: 0;
+    margin-bottom: 30px;
+    left: 50px;
+    animation: example2 1s ease-in-out;
+}
+
+.btn a:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.normal-area{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.country-zil,.country-ico,.country-ica{
+    position: absolute;
+    width: 100%;
+    height: 100%;     
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    animation: example1 1s ease-in-out;
+    
+}
+
+.country-zil h1,.country-ico h1,.country-ica h1{
+    font-size: 200px;
+    color: rgb(85, 75, 75);
+    background: transparent;
+    mix-blend-mode:difference;
+}
+
+
+.navigation{
+    display: flex;
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+  
+}
+
+.navigation a{
+    border: 2px solid white;
+    background-color: white;
+    text-align: center;
+    color: black;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+
+
+
+.navigation a:hover{
+    background-color: transparent;
+    &:hover i{
+        color: white;
+    }
+}
+
+
