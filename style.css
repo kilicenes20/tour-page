@@ -172,12 +172,6 @@ body {
     font-size: 200px;
 }
 
-.right-info h3 {
-    position: absolute;
-    font-size: 100px;
-    transform: translateY(100%);
-}
-
 .navigation {
     position: absolute;
     bottom: 8%;
