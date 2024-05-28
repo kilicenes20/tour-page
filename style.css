@@ -1,283 +1,210 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
+    margin: 0;
+    font-family:'Poppins',sans-serif;
 }
 
-
-body{
+body {
     overflow: hidden;
 }
 
- /*----------------------------NAVBAR--------------------------------*/
-nav{
+.slide img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.slide.active img{
+    opacity: 1;
+    transition: .3s ease;
+} 
+
+
+
+
+.header {
+    z-index: 100;
     position: fixed;
-    top: 0;
-    left: 0;
+    color: #fff;
     display: flex;
-    width: 100%;
-    align-items: center;
     justify-content: space-between;
-    padding: 30px 5%;
-    background: transparent;
-    z-index: 1;
-    color: white;
+    width: 100%;
+
 }
-.left{
+
+.header .left {
+    display: flex;
+    margin: 20px;
+}
+
+.header .left .head {
+    font-size: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .left .socialMedia {
     display: flex;
     align-items: center;
 }
 
-
-.left h1{
-    margin-right: 10px;
-    font-size: 50px;
-    
-}
-
-.left a{
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    margin-right: 10px;
-    padding: 5px;
-    text-align: center;
-    transition: .5s;
-
-}
-
-
-
-.left a:hover{
-    background-color: white;
-   
-}
-
-.left a:hover i{
-    color: black;
-}
-
-.right a{
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+.header .left .socialMedia a {
+    color: #fff;
+    margin-right: 20px;
+    font-size: 30px;
     &:hover{
-        border-bottom: 2px solid white;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        padding: 5px 15px;
+        color: #000;
     }
 }
 
+.header .right .navbar ul{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
 
-@keyframes example{
-    0%{
-        bottom: -100%; 
-        opacity: 0;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
-    }
-    33%{
-        opacity: .33;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
-    }
-
-    66%{
-        opacity: .66;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
-    }
-    100%{
-        opacity: 1;
-        bottom:0;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
+.header .right ul a{
+    border-bottom: 1px solid #fff;
+    list-style-type: none;
+    margin: 10px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    &:hover{
+        color: #000;
     }
 }
 
-
-@keyframes example1{
-    0%{
-        top: -100%; 
-        opacity: 0;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
-    }
-    33%{
-        opacity: .33;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
-    }
-
-    66%{
-        opacity: .66;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
-    }
-    100%{
-        opacity: 1;
-        top:0;
-        font-size: 200px;
-        color: rgb(85, 75, 75);
-        background: transparent;
-        mix-blend-mode:difference;
-    }
-}
-
-
-@keyframes example2{
-    0%{
-        bottom: -100%; 
-        opacity: 0;
-    }
-    33%{
-        opacity: .33;
-    }
-
-    66%{
-        opacity: .66;
-    }
-    100%{
-        opacity: 1;
-        bottom:0;
-
-    }
-}
-
-
-section{
-    width: 100%;
-    height: 100%;
-}
-
-.slide-brazil img,.slide-mexico img,.slide-africa img{
+.slide .left-info {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* RESMİN SAYFAYA DOLMASINI SAĞLADI */
-}
-
-.blur-area{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 50%;
     height: 100%;
+
+    transition: 0s ;
+    transform: translateY(-100%);
 }
 
-.country-bra,.country-mex,.country-afr{ /* İÇİ TRANSPARAN YAPICALACAK */
+.slide.active .left-info{
+    transform: translateY(0);
+    transition: .3s ease;
+}
+
+
+
+.blur-area {
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(20px);
     position: absolute;
     width: 100%;
-    height: 100%;     
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    animation: example 1s ease-in-out;
+    -webkit-mask: linear-gradient(#fff 0 0),
+    linear-gradient(#fff 0 0);
+    -webkit-mask-clip: text, padding-box;
+    -webkit-mask-composite: xor;
 }
 
-.country-bra h1,.country-mex h1,.country-afr h1{
+.blur-area h1 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, .9);
+    color: #fff;
     font-size: 200px;
-    color: rgb(85, 75, 75);
-    background: transparent;
-    mix-blend-mode:difference;
-
 
 }
 
-.content-brazil,.content-mexico,.content-africa{
+.left-info .content {
     position: absolute;
-    color: white;
-    bottom: 0;
-    padding: 50px;
-    margin-bottom: 25px;
-    animation: example2 1s ease-in-out;
+    bottom: 8%;
+    left: 1%;
+    color: #fff;
 }
 
-
-.btn a{
+.left-info .btn {
     position: absolute;
-    text-decoration: none;
-    color: black;
-    border: 1px solid white;
+    border: 1px solid #fff;
+    bottom: 2%;
+    right: 5%;
     padding: 10px;
-    background-color: white;
     border-radius: 5px;
-    bottom: 0;
-    margin-bottom: 30px;
-    left: 50px;
-    animation: example2 1s ease-in-out;
+    cursor: pointer;
 }
 
-.btn a:hover{
-    background-color: transparent;
-    color: white;
+.btn a {
+    text-decoration: none;
+    color: #fff;
+    &:hover{
+        color: #000;
+    }
 }
 
-.normal-area{
+
+.slide .right-info {
     position: absolute;
     top: 0;
     right: 0;
     width: 50%;
     height: 100%;
-}
-
-.country-zil,.country-ico,.country-ica{
-    position: absolute;
-    width: 100%;
-    height: 100%;     
     display: flex;
-    justify-content: flex-start;
-    align-items: center; 
-    animation: example1 1s ease-in-out;
-    
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .5);
+    transform: translateX(100%);
+    transition: 0s ;
 }
 
-.country-zil h1,.country-ico h1,.country-ica h1{
+.slide.active .right-info{
+    transform: translateX(0);
+    transition: .3s ease;
+}
+
+.right-info h1 {
     font-size: 200px;
-    color: rgb(85, 75, 75);
-    background: transparent;
-    mix-blend-mode:difference;
 }
 
+.right-info h3 {
+    position: absolute;
+    font-size: 100px;
+    transform: translateY(100%);
+}
 
-.navigation{
-    display: flex;
+.navigation {
     position: absolute;
     bottom: 8%;
-    right: 8%;
-  
+    right: 5%;
 }
 
-.navigation a{
-    border: 2px solid white;
-    background-color: white;
-    text-align: center;
-    color: black;
-    margin: 10px;
-    padding: 20px;
+.navigation .prev-btn {
+    border: 1px solid #fff;
+    padding: 20px 30px;
     border-radius: 5px;
-    
-}
-
-
-
-.navigation a:hover{
-    background-color: transparent;
-    &:hover i{
-        color: white;
+    margin-right: 20px;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        background-color: #fff;
+        color: #000;
     }
 }
 
-
+.navigation .next-btn {
+    border: 1px solid #fff;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    &:hover{
+        background-color: transparent;
+        color: #fff;
+    }
+}

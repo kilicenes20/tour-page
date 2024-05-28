@@ -1,62 +1,129 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <title>Tours...</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>.Tour</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <nav>
-            <div class="left">
-                <h1>Tours...</h1>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-facebook-square' ></i></a>
-                <a href="#"><i class='bx bxl-telegram' ></i></a>
+    <header class="header">
+        <div class="left">
+            <a href="#" class="head">.Tour</a>
+            <div class="socialMedia">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
             </div>
-            <div class="right">
-                <a href="#">Tours</a>
-                <a href="#">Booking</a>
-                <a href="#">Service</a>
-                <a href="#">Contact</a>
+        </div>
+        <div class="right">
+            <div class="navbar">
+                <ul>
+                    <a href="#">
+                        <li>About</li>
+                    </a>
+                    <a href="#">
+                        <li>Contact</li>
+                    </a>
+                    <a href="#">
+                        <li>S.S.S</li>
+                    </a>
+                </ul>
             </div>
-        </nav>
-        <section>
+        </div>
+    </header>
+    <section>
+        <div class="container">
             <div class="slider">
-                <div class="slide-brazil">
-                    <img src="brazil.jpg" alt="brazil">
-                    <div class="blur-area">
-                        <div class="country-bra">
-                            <h1 class="text">BRA</h1>
+                <div class="slide active">
+                    <img src="brazil.jpg" alt="">
+                    <div class="left-info">
+                        <div class="blur-area">
+                            <h1>BRA</h1>
                         </div>
-                        <div class="content-brazil">
-                            <h2>1. Brazil Tour</h2> <hr>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque suscipit error accusamus facilis rerum a velit quis illo, consequuntur doloremque necessitatibus dolores natus explicabo tempore enim aliquid tempora neque ullam corporis sunt vitae blanditiis beatae. Suscipit fuga saepe sit praesentium temporibus neque illum delectus perspiciatis. Laborum eum nemo nihil qui!</p>
-                        </div>   
+                        <div class="content">
+                            <h2>1. Brazil Tour</h2>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque suscipit error accusamus
+                                facilis rerum a velit quis illo, consequuntur doloremque necessitatibus dolores natus
+                                explicabo tempore enim aliquid tempora neque ullam corporis sunt vitae blanditiis
+                                beatae. Suscipit fuga saepe sit praesentium temporibus neque illum delectus
+                                perspiciatis. Laborum eum nemo nihil qui!</p>
+                        </div>
                         <div class="btn">
                             <a href="#">More Details</a>
                         </div>
                     </div>
-                    <div class="normal-area">
-                        <div class="country-zil">
-                            <h1 class="text">ZIL</h1>
+
+                    <div class="right-info">
+                        <h1>ZIL</h1>
+                        <h3>Forest</h3>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="mexico.jpg" alt="">
+                    <div class="left-info">
+                        <div class="blur-area">
+                            <h1>MEX</h1>
                         </div>
-                        <div class="navigation">
-                            <div class="navigation-left">
-                                <a href="#"><i class='bx bxs-left-arrow' ></i></a>
-                            </div>
-                            <div class="navigation-right">
-                                <a href="#index2.html"><i class='bx bxs-right-arrow' ></i></a>
-                            </div>
+                        <div class="content">
+                            <h2>2. Mexico Tour</h2>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque suscipit error accusamus
+                                facilis rerum a velit quis illo, consequuntur doloremque necessitatibus dolores natus
+                                explicabo tempore enim aliquid tempora neque ullam corporis sunt vitae blanditiis
+                                beatae. Suscipit fuga saepe sit praesentium temporibus neque illum delectus
+                                perspiciatis. Laborum eum nemo nihil qui!</p>
                         </div>
+                        <div class="btn">
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+
+                    <div class="right-info">
+                        <h1>ICO</h1>
+                        <h3>Forest</h3>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="africa.jpg" alt="">
+                    <div class="left-info">
+                        <div class="blur-area">
+                            <h1>AFR</h1>
+                        </div>
+                        <div class="content">
+                            <h2>3. Africa Tour</h2>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque suscipit error accusamus
+                                facilis rerum a velit quis illo, consequuntur doloremque necessitatibus dolores natus
+                                explicabo tempore enim aliquid tempora neque ullam corporis sunt vitae blanditiis
+                                beatae. Suscipit fuga saepe sit praesentium temporibus neque illum delectus
+                                perspiciatis. Laborum eum nemo nihil qui!</p>
+                        </div>
+                        <div class="btn">
+                            <a href="#">More Details</a>
+                        </div>
+                    </div>
+
+                    <div class="right-info">
+                        <h1>ICA</h1>
+                        <h3>Forest</h3>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+        <div class="navigation">
+            <span class="prev-btn"><i class="fa-solid fa-chevron-left"></i></span>
+            <span class="next-btn"><i class="fa-solid fa-chevron-right"></i></span>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>
